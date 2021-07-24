@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { projectStorage } from "../firebase/config";
+import {
+	projectStorage,
+	projectFirestore,
+	timestamp,
+} from "../firebase/config";
 
 //creating a custom hook
 //resposnible to handle file uploads in firebase
@@ -12,6 +16,7 @@ const useStorage = (file) => {
 	useEffect(() => {
 		//referance to a file inside firebase storage
 		let storageRef = projectStorage.ref(file.name);
+		let collectionRef = projectFirestore.collection("images");
 
 		//use put method to upload the file in the refrenace location
 		//async function, whhc will trigger sevral events
@@ -32,6 +37,12 @@ const useStorage = (file) => {
 			},
 			async () => {
 				const url = await storageRef.getDownloadURL();
+
+				//save the url to firestore
+				//so we can cycle thru the image and show them in the UI
+				const createdAt = timestamp();
+				collectionRef.add({ url, createdAt });
+
 				setUrl(url);
 			}
 		);
