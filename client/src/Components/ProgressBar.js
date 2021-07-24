@@ -4,11 +4,7 @@ import useStorage from "../Hooks/useStrorage";
 const ProgressBar = ({ file, setFile }) => {
 	const { url, progress } = useStorage(file);
 	console.log(progress, url);
-	return (
-		<div>
-			<p>progress</p>
-		</div>
-	);
+	return <div className="progress-bar" style={{ width: progress + "%" }}></div>;
 };
 
 export default ProgressBar;
