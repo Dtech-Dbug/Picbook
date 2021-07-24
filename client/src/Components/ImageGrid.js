@@ -7,7 +7,7 @@ const ImageGrid = ({ selectedImage, setSelectedImage }) => {
 
 	console.log("Docs --->", docs);
 	return (
-		<motion.div className="img-grid">
+		<div className="img-grid">
 			{docs &&
 				docs.map((item) => {
 					return (
