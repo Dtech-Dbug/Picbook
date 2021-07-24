@@ -16,7 +16,7 @@ const useStorage = (file) => {
 	useEffect(() => {
 		//referance to a file inside firebase storage
 		let storageRef = projectStorage.ref(file.name);
-		let collectionRef = projectFirestore.collection("images");
+		let collectionRef = projectFirestore.collection("Images");
 
 		//use put method to upload the file in the refrenace location
 		//async function, whhc will trigger sevral events
