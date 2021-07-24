@@ -21,6 +21,8 @@ firebase.initializeApp(firebaseConfig);
 //intitliaseing services
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
+//create time stamp using server timestamp by firebase
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 const auth = firebase.auth();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
