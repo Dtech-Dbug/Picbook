@@ -4,7 +4,7 @@ import { projectStorage } from "../firebase/config";
 //creating a custom hook
 //resposnible to handle file uploads in firebase
 
-const useStrorage = (file) => {
+const useStorage = (file) => {
 	const [error, setError] = useState(null);
 	const [progress, setProgress] = useState(0);
 	const [url, setUrl] = useState(null);
@@ -40,4 +40,4 @@ const useStrorage = (file) => {
 	return { progress, url, error };
 };
 
-export default useStrorage;
+export default useStorage;
