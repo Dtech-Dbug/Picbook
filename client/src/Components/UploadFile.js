@@ -30,7 +30,7 @@ const UploadFile = () => {
 				{file && <div>{file.name}</div>}
 				{file && (
 					<div>
-						<ProgressBar />
+						<ProgressBar file={file} setFile={setFile} />
 					</div>
 				)}
 			</>
