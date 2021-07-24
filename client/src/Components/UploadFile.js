@@ -17,14 +17,14 @@ const UploadFile = () => {
 			setFile(uploadedFile);
 		} else {
 			console.log("No");
-			setError("Invalid File Format. Please Check");
+			setError("Invalid File Format. Please use (png/jpeg)");
 		}
 	};
 	return (
 		<form>
 			<input type="file" onChange={handleFileUpload}></input>
-			<br />
-			{error}
+
+			<>{error && <div className="error">{error}</div>}</>
 		</form>
 	);
 };
