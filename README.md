@@ -10,7 +10,7 @@ Picbook is an application that let's you store the most precious moments of your
 **Introduction**
 - This is a relatively easy and a fun way to getting started with hands on application with cloud services and integrating them with the view.
 - Seamless full stack experience , without the hassles of creating your own server, controllers or data model.
-- Why not? Becuase Firebase takes care of all those for us. It is a quite popular backend as a service platform, and experience w/ firebase gives you a competetive edge.
+- Why not? Becuase Firebase takes care of all those for us. It is a quite popular backend as a service platform, and experience w/ firebase gives you a competetive edge, in the cloud-driven tech space. ☁
 
 *Note* : A Prior understanding of React is necessary to move forward, with this one.
 
@@ -26,13 +26,27 @@ Picbook is an application that let's you store the most precious moments of your
 - Once you have made the desired changes, push it to your origin, and create a PR. 🤝
 
 ### 2. Getting started w/ picbook codebase
-**Project Dependancies**
+***Project Dependancies***
 - create-react-app : *CRA template to auto generate a react codebase* 
 - firebase : *to be able to use firebase services* ``` npm i firebase ```
 - framer-motion : *for adding quirk and fun animation* ``` npm i framer-motion ```
 - Docs  : [framer-motion](https://www.framer.com/motion/) , [firebase](https://firebase.google.com/docs) , [React](https://reactjs.org/docs/getting-started.html)
 
-<u> **Services used from firebase** </u>
+***Services used from firebase***
 - Firestore : *Like a database to store all the urls of the uploaded images. 🔥*
 - Storage : *to store the uploaded images and get their URLS before adding the images to the firestore collection 💥*
+
+***Initialising firebase services, after configuring firebase config with the sdk from firebase***
+
+
+*Importing services we would use*
+- ``` import firebase from 'firebase' ```
+- ```import 'firebase/storage' ```
+- ``` import firebase/firestore' ```
+
+
+*Intiliasing the services*
+- ``` let projectStorage(any name) = firebase.storage() ```
+-  ``` let projectFirestore = firebase.firestore() ```
+-  ``` export { projectStorage , projectFirestore} ``` : to be able to use the services, we need to export the variables which stores the invoked/initialised services
 
