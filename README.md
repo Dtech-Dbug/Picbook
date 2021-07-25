@@ -32,3 +32,7 @@ Picbook is an application that let's you store the most precious moments of your
 - framer-motion : *for adding quirk and fun animation* ``` npm i framer-motion ```
 - Docs  : [framer-motion](https://www.framer.com/motion/) , [firebase](https://firebase.google.com/docs) , [React](https://reactjs.org/docs/getting-started.html)
 
+<u> **Services used from firebase** </u>
+- Firestore : *Like a database to store all the urls of the uploaded images. 🔥*
+- Storage : *to store the uploaded images and get their URLS before adding the images to the firestore collection 💥*
+
